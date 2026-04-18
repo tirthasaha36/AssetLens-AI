@@ -2,7 +2,6 @@
 
 import { Check, MapPin, Target, Wallet, Calendar } from "lucide-react";
 import styles from "./Hero.module.css";
-import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -41,14 +40,13 @@ export default function Hero() {
 
           <div className={styles.visualContainer}>
             <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
-              <Image 
+              <img 
                 src="/images/hero-image.png" 
                 alt="AI Valuator Intelligence Illustration" 
                 width={900}
                 height={800}
                 className={styles.illustration}
                 style={{ objectPosition: 'center' }}
-                priority
               />
             </div>
           </div>

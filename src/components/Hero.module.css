@@ -111,7 +111,7 @@
 }
 
 .illustration {
-  width: 130%; /* Even larger to allow for aggressive edge fading */
+  width: 230%; /* Zoomed out from 130% */
   height: auto;
   max-width: none;
   /* Aggressive radial mask to fade out all edges (top, bottom, left, right) */
