@@ -16,14 +16,14 @@ export default function Navbar() {
             <Home size={28} />
           </div>
           <span className={styles.logoText}>
-            AI Valuator
+            AssetLens AI
           </span>
         </Link>
 
         {/* Desktop Links */}
         <div className={styles.links}>
-          <Link href="/" className={styles.link}>Home</Link>
           <Link href="#features" className={styles.link}>Features</Link>
+          <Link href="#how-it-works" className={styles.link}>How it works</Link>
           <Link href="#about" className={styles.link}>About</Link>
           <button className={styles.btnStarted}>Get Started</button>
         </div>
@@ -37,8 +37,8 @@ export default function Navbar() {
       {/* Mobile Menu - Simple CSS Display */}
       {isOpen && (
         <div className={styles.mobileMenu}>
-          <Link href="/" className={styles.link} onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="#features" className={styles.link} onClick={() => setIsOpen(false)}>Features</Link>
+          <Link href="#how-it-works" className={styles.link} onClick={() => setIsOpen(false)}>How it works</Link>
           <Link href="#about" className={styles.link} onClick={() => setIsOpen(false)}>About</Link>
           <button className={styles.btnStarted} style={{ width: '100%' }}>Get Started</button>
         </div>

@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 8rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   min-height: 90vh;
   display: flex;
@@ -15,16 +15,9 @@
   padding: 0 1.5rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
   align-items: center;
   position: relative;
   z-index: 2;
-}
-
-@media (min-width: 992px) {
-  .container {
-    grid-template-columns: 1fr 1.3fr;
-  }
 }
 
 .content {
@@ -32,6 +25,39 @@
   flex-direction: column;
   gap: 1.5rem;
   text-align: left;
+  position: relative;
+  z-index: 10;
+}
+
+/* Hide image on mobile and tablets */
+.visualContainer {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 1rem;
+  }
+  
+  /* Show image only on desktop */
+  .visualContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .illustration {
+    width: 230%;
+    height: auto;
+    max-width: none;
+    mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
+    opacity: 0.95;
+  }
 }
 
 .title {
@@ -100,24 +126,6 @@
   color: #94a3b8;
   margin-top: 0.75rem;
   font-weight: 500;
-}
-
-.visualContainer {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.illustration {
-  width: 230%; /* Zoomed out from 130% */
-  height: auto;
-  max-width: none;
-  /* Aggressive radial mask to fade out all edges (top, bottom, left, right) */
-  mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
-  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 80%);
-  opacity: 0.95; /* Slight opacity to soften the entire image */
 }
 
 /* Stats Section */

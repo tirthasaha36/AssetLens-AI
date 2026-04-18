@@ -27,7 +27,7 @@ export default function Home() {
         <footer className={styles.footer}>
           <div className={styles.footerContent}>
             <div className={styles.footerLeft}>
-              <span className={styles.footerLogo}>AI Valuator</span>
+              <span className={styles.footerLogo}>AssetLens AI</span>
               <p className={styles.footerDesc}>The most accurate AI-powered property valuation engine.</p>
             </div>
             <div className={styles.footerLinks}>
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.footerBottom}>
-            <p>&copy; 2026 AI Valuator. All rights reserved.</p>
+            <p>&copy; 2026 AssetLens AI. All rights reserved.</p>
           </div>
         </footer>
       </main>
